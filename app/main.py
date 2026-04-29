@@ -44,9 +44,25 @@ async def ver_astronautas():
     if result:
         total, people = result
 
-        print(f"\n👨‍🚀 Astronautas en el espacio: {total}")
+        print("\n==============================")
+        print("👨‍🚀 INFORMACIÓN DE ASTRONAUTAS")
+        print("==============================")
+        print(f"\nTotal en el espacio: {total}")
+
+        naves = {}
+
         for p in people:
-            print(f"- {p['name']} ({p['craft']})")
+            nave = p["craft"]
+
+            if nave not in naves:
+                naves[nave] = []
+
+            naves[nave].append(p["name"])
+
+        for nave, nombres in naves.items():
+            print(f"\n🚀 Nave: {nave}")
+            for nombre in nombres:
+                print(f"   - {nombre}")
 
 
 def ver_historial():
