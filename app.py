@@ -4,7 +4,7 @@ ISS_URL = "http://api.open-notify.org/iss-now.json"
 ASTRO_URL = "http://api.open-notify.org/astros.json"
 
 print("===================================")
-print("🚀 ISS TRACKER + ASTRONAUTAS")
+print("ISS TRACKER + ASTRONAUTAS")
 print("===================================")
 
 try:
@@ -21,7 +21,7 @@ try:
     longitude = data_iss["iss_position"]["longitude"]
     timestamp = data_iss["timestamp"]
 
-    print("\n📍 UBICACIÓN ISS")
+    print("\n UBICACIÓN ISS")
     print(f"Latitud: {latitude}")
     print(f"Longitud: {longitude}")
     print(f"Timestamp: {timestamp}")
@@ -37,7 +37,7 @@ try:
 
     total = data_ast["number"]
 
-    print("\n👨‍🚀 ASTRONAUTAS EN EL ESPACIO")
+    print("\n ASTRONAUTAS EN EL ESPACIO")
     print(f"Total: {total}")
 
     for person in data_ast["people"]:
